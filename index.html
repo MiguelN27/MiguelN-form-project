@@ -21,21 +21,74 @@
                         <div class="col-6 text-start">
                             <div class="mb-3">
                                 <label for="card-number" class="form-label">Card #</label>
-                                <input type="text" class="form-control" id="card-number" placeholder="xxxxxxxxxxxxxxxxx">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="card-number" 
+                                    placeholder="xxxxxxxxxxxxxxxxx"
+                                    minlength="13"
+                                    maxlength="16"
+                                    required
+                                >
                             </div>
                         </div>
                         <div class="col-2 text-start">
                             <div class="mb-3">
                                 <label for="card-cvc" class="form-label">CVC #</label>
-                                <input type="text" class="form-control" id="card-cvc" placeholder="0000">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="card-cvc" 
+                                    placeholder="0000"
+                                    minlength="3"
+                                    maxlength="4"     
+                                    required                           
+                                >
                             </div>
                         </div>
-                        <div class="col-4"></div>
+                        <div class="col-4 text-start">
+                            <label for="amount" class="form-label">Amount</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">$</span>
+                                <input 
+                                type="text" 
+                                class="form-control" 
+                                id="amount"
+                                aria-label="Amount"
+                                minlength="1"
+                                maxlength="9"
+                                required
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-start">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input class="form-control" type="text" id="first-name" placeholder="" aria-label="default input example" required>
+                        </div>
+                        <div class="col-6 text-start">
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input class="form-control" type="text" id="last-name" placeholder="" aria-label="default input example" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-start">
+                            <label for="city" class="form-label">City</label>
+                            <input class="form-control" type="text" id="city" placeholder="" aria-label="default input example" required>
+                        </div>
+                        <div class="col-3">
+
+                        </div>
+                        <div class="col-3 text-start">
+                            <label for="zip-code" class="form-label">Zip Code</label>
+                            <input class="form-control" type="text" id="zip-code" placeholder="" aria-label="default input example" required>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer text-body-secondary text-end">
                     <button type="button" class="btn btn-secondary">cancel</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
         </div>
