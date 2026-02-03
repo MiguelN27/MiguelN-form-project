@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
+    <form>
     <div class="row mt-5">
         <div class="col-3"></div>
-
         <div class="col-6">
             <div class="card text-center mx-5">
                 <div class="card-header fw-bold text-start">
@@ -18,13 +18,14 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-6 text-start">
-                            <div class="mb-3">
+                        <div class="col-6">
+                            <div class="mb-3 text-start">
                                 <label for="card-number" class="form-label">Card #</label>
-                                <input 
+                                <input
                                     type="text" 
                                     class="form-control" 
-                                    id="card-number" 
+                                    id="card-number"
+                                    aria-label="card-number" 
                                     placeholder="xxxxxxxxxxxxxxxxx"
                                     minlength="13"
                                     maxlength="16"
@@ -32,8 +33,8 @@
                                 >
                             </div>
                         </div>
-                        <div class="col-2 text-start">
-                            <div class="mb-3">
+                        <div class="col-2">
+                            <div class="mb-3 text-start">
                                 <label for="card-cvc" class="form-label">CVC #</label>
                                 <input 
                                     type="text" 
@@ -41,8 +42,8 @@
                                     id="card-cvc" 
                                     placeholder="0000"
                                     minlength="3"
-                                    maxlength="4"     
-                                    required                           
+                                    maxlength="4"    
+                                    required 
                                 >
                             </div>
                         </div>
@@ -51,13 +52,13 @@
                             <div class="input-group mb-3">
                                 <span class="input-group-text">$</span>
                                 <input 
-                                type="text" 
-                                class="form-control" 
-                                id="amount"
-                                aria-label="Amount"
-                                minlength="1"
-                                maxlength="9"
-                                required
+                                    type="text" 
+                                    class="form-control" 
+                                    id="amount"
+                                    aria-label="Amount"
+                                    minlength="1"
+                                    maxlength="9"
+                                    required
                                 >
                             </div>
                         </div>
@@ -72,32 +73,82 @@
                             <input class="form-control" type="text" id="last-name" placeholder="" aria-label="default input example" required>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row pt-2">
                         <div class="col-6 text-start">
                             <label for="city" class="form-label">City</label>
                             <input class="form-control" type="text" id="city" placeholder="" aria-label="default input example" required>
                         </div>
-                        <div class="col-3">
-
+                        <div class="col-3 text-start m-0">
+                            <label class="form-label" for="inputGroupSelect01">State</label>
+                            <div class="input-group mb-3">
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Alabama</option>
+                                    <option value="2">Alaska</option>
+                                    <option value="3">Arizona</option>
+                                    <option value="4">Arkansas</option>
+                                    <option value="5">California</option>
+                                    <option value="6">Colorado</option>
+                                    <option value="7">connecticut</option>
+                                    <option value="8">Delaware</option>
+                                    <option value="9">Florida</option>
+                                    <option value="10">Georgia</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="col-3 text-start">
                             <label for="zip-code" class="form-label">Zip Code</label>
                             <input class="form-control" type="text" id="zip-code" placeholder="" aria-label="default input example" required>
                         </div>
                     </div>
+                    <div class="row pt-2">
+                        <div class="col-6">
+                            <div class="container-fluid text-start my-5 p-0 mx-1 w-75 btn btn-secondary">
+                                <div class="form-check form-check-inline m-4">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"/>
+                                    </svg></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paypal" viewBox="0 0 16 16">
+                                    <path d="M14.06 3.713c.12-1.071-.093-1.832-.702-2.526C12.628.356 11.312 0 9.626 0H4.734a.7.7 0 0 0-.691.59L2.005 13.509a.42.42 0 0 0 .415.486h2.756l-.202 1.28a.628.628 0 0 0 .62.726H8.14c.429 0 .793-.31.862-.731l.025-.13.48-3.043.03-.164.001-.007a.35.35 0 0 1 .348-.297h.38c1.266 0 2.425-.256 3.345-.91q.57-.403.993-1.005a4.94 4.94 0 0 0 .88-2.195c.242-1.246.13-2.356-.57-3.154a2.7 2.7 0 0 0-.76-.59l-.094-.061ZM6.543 8.82a.7.7 0 0 1 .321-.079H8.3c2.82 0 5.027-1.144 5.672-4.456l.003-.016q.326.186.548.438c.546.623.679 1.535.45 2.71-.272 1.397-.866 2.307-1.663 2.874-.802.57-1.842.815-3.043.815h-.38a.87.87 0 0 0-.863.734l-.03.164-.48 3.043-.024.13-.001.004a.35.35 0 0 1-.348.296H5.595a.106.106 0 0 1-.105-.123l.208-1.32z"/>
+                                    </svg></label>
+                                </div>
+                                <div class="form-check form-check-inline m-4">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alipay" viewBox="0 0 16 16">
+                                    <path d="M2.541 0H13.5a2.55 2.55 0 0 1 2.54 2.563v8.297c-.006 0-.531-.046-2.978-.813-.412-.14-.916-.327-1.479-.536q-.456-.17-.957-.353a13 13 0 0 0 1.325-3.373H8.822V4.649h3.831v-.634h-3.83V2.121H7.26c-.274 0-.274.273-.274.273v1.621H3.11v.634h3.875v1.136h-3.2v.634H9.99c-.227.789-.532 1.53-.894 2.202-2.013-.67-4.161-1.212-5.51-.878-.864.214-1.42.597-1.746.998-1.499 1.84-.424 4.633 2.741 4.633 1.872 0 3.675-1.053 5.072-2.787 2.08 1.008 6.37 2.738 6.387 2.745v.105A2.55 2.55 0 0 1 13.5 16H2.541A2.55 2.55 0 0 1 0 13.437V2.563A2.55 2.55 0 0 1 2.541 0"/>
+                                    <path d="M2.309 9.27c-1.22 1.073-.49 3.034 1.978 3.034 1.434 0 2.868-.925 3.994-2.406-1.602-.789-2.959-1.353-4.425-1.207-.397.04-1.14.217-1.547.58Z"/>
+                                    </svg></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stripe" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.226 5.385c-.584 0-.937.164-.937.593 0 .468.607.674 1.36.93 1.228.415 2.844.963 2.851 2.993C11.5 11.868 9.924 13 7.63 13a7.7 7.7 0 0 1-3.009-.626V9.758c.926.506 2.095.88 3.01.88.617 0 1.058-.165 1.058-.671 0-.518-.658-.755-1.453-1.041C6.026 8.49 4.5 7.94 4.5 6.11 4.5 4.165 5.988 3 8.226 3a7.3 7.3 0 0 1 2.734.505v2.583c-.838-.45-1.896-.703-2.734-.703"/>
+                                    </svg></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3 text-start">
+                                <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <span class="text-start fs-12">Add any notes here</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-footer text-body-secondary text-end">
                     <button type="button" class="btn btn-secondary">cancel</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary" type="submit">Submit form</button>
                 </div>
             </div>
         </div>
-
-
-
         <div class="col-3"></div>
     </div>
-
+    </form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
